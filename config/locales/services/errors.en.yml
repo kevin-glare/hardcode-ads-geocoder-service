@@ -1,0 +1,4 @@
+ru:
+  services:
+    errors:
+      not_found: 'The requested city was not found'
