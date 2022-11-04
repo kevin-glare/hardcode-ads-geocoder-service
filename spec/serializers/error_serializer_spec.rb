@@ -32,11 +32,11 @@ RSpec.describe ErrorSerializer do
       let(:meta) { { level: 'error' } }
 
       it 'returns errors representation' do
-        expect(subject.from_message(message, meta: meta)).to eq(
+        expect(subject.from_message(message, meta:)).to eq(
           errors: [
             {
               detail: message,
-              meta: meta
+              meta:
             }
           ]
         )

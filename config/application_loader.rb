@@ -43,6 +43,6 @@ module ApplicationLoader
 
   def require_dir(path)
     path = File.join(ROOT_PATH, path)
-    Dir["#{path}/**/*.rb"].each { |file| require file}
+    Dir["#{path}/**/*.rb"].each { |file| require file }
   end
 end
