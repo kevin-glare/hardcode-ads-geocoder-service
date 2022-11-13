@@ -1,20 +1,11 @@
 # frozen_string_literal: true
 
-class Application < Sinatra::Base
-  use Rack::JSONBodyParser
-
-  helpers Validations
-
-  configure do
-    register Sinatra::Namespace
-    register ApiErrors
-    set :app_file, File.expand_path(__dir__)
-    set :default_content_type, :json
+class Application
+  def self.root
+    File.expand_path('..', __dir__)
   end
 
-  configure :development do
-    register Sinatra::Reloader
-
-    set :show_exceptions, false
+  def self.environment
+    ENV.fetch('RACK_ENV').to_sym
   end
 end

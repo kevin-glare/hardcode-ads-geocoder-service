@@ -8,6 +8,10 @@ class Configurable
     setting :available_locales, default: %i[en ru]
   end
 
+  setting :rabbit_mq do
+    setting :consumer_pool, default: ENV.fetch('RABBIT_MQ_CONSUMER_POOL', 2)
+  end
+
   setting :secret_key_base, default: ENV.fetch('SECRET_KEY_BASE')
 end
 
