@@ -33,7 +33,7 @@ module AdsService
 
     def create_queque
       channel = RabbitMq.channel
-      channel.queue('ads', durable: true)
+      channel.queue('ads_geocoder', durable: true)
     end
 
     def create_reply_queue

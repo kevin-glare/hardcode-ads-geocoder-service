@@ -8,5 +8,5 @@ port = ENV['PORT'] || 3000
 
 rack hostname do
   append preload 'config/preload.rb'
-  endpoint Async::HTTP::Endpoint.parse("http://0.0.0.0:#{port}").with(protocol: Async::HTTP::Protocol::HTTP11)
+  endpoint Async::HTTP::Endpoint.parse("http://0.0.0.0:#{port}").with(protocol: Async::HTTP::Protocol::HTTP2)
 end
