@@ -4,7 +4,7 @@
 load :rack
 
 hostname = File.basename(__dir__)
-port = ENV['PORT'] || 3000
+port = ENV['PORT'] || 3002
 
 rack hostname do
   append preload 'config/preload.rb'
