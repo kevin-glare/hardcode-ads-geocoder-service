@@ -3,6 +3,15 @@
 class Configurable
   extend Dry::Configurable
 
+  setting :app do
+    setting :name, default: 'geocoder'
+  end
+
+  setting :logger do
+    setting :path, default: 'log/app.log'
+    setting :level, default: 'info'
+  end
+
   setting :i18n do
     setting :default_locale, default: :ru
     setting :available_locales, default: %i[en ru]

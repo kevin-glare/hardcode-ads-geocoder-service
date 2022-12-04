@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
+require 'sinatra/custom_logger'
+
 class Application < Sinatra::Base
   use Rack::JSONBodyParser
 
   helpers Validations
+  helpers Sinatra::CustomLogger
 
   configure do
     register Sinatra::Namespace
@@ -15,6 +18,6 @@ class Application < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
 
-    set :show_exceptions, false
+    set :show_exceptions, true
   end
 end
