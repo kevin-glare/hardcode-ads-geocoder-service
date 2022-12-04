@@ -23,6 +23,9 @@ gem 'bunny', '~> 2.19.0'
 gem 'dotenv', '~> 2.8.1', groups: %i[development test], require: 'dotenv/load'
 
 gem 'rack-ougai', '~> 0.3.0'
+gem 'amazing_print', '~> 1.4.0'
+
+gem 'rack-request-id', '~> 0.0.4'
 
 group :test do
   gem 'rack-test', '~> 2.0.2'
